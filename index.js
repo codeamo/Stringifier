@@ -35,9 +35,7 @@ function stringifier (input) {
     result = '{' + result.join(',') + '}';
     return result;
   }
-}  
-
-// }
+}
 
 // Allow tests to run on the server (leave at the bottom)
 if (typeof window === 'undefined') {
