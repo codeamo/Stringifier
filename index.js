@@ -6,13 +6,13 @@ function stringifier (input) {
     return undefined;
   } else if (input === null) {
     return 'null';
-  } else if (input.constructor === String) {
+  } else if (typeof input === 'string') {
     return '"' + input.replace(/"/g, '\\"') + '"';
-  } else if (input.constructor === Number) {
-    return String(input);
-  } else if (input.constructor === Boolean) {
+  } else if (typeof input === 'number') {
+    return input.toString();
+  } else if (typeof input === 'boolean') {
     return input ? 'true' : 'false';
-  } else if (input.constructor === Function) {
+  } else if (typeof input === 'function') {
     return undefined;
   } else if (Array.isArray(input)) {
     let result = [];
